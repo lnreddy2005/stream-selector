@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stream Selector</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stream-selector.css">
+</head>
+<body>
+ <nav>
+    <div class="logo">🎓 Stream Selector</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="#">Intermediate</a>
+          <ul>
+            <li><a href="details.html#inter-mpc">MPC</a></li>
+            <li><a href="details.html#inter-bipc">BiPC</a></li>
+            <li><a href="details.html#inter-cec">CEC</a></li>
+          </ul>
+        </li>
+        <li><a href="#">B.Tech</a>
+          <ul>
+            <li><a href="details.html#btech-cse">CSE</a></li>
+            <li><a href="details.html#btech-ece">ECE</a></li>
+            <li><a href="details.html#btech-mech">Mechanical</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Other Courses</a>
+          <ul>
+            <li><a href="details.html#diploma">Diploma</a></li>
+            <li><a href="details.html#ca">CA / CMA</a></li>
+            <li><a href="details.html#design">Design</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Profile" />
+        <div class="profile-dropdown">
+          <a href="#" onclick="logout()">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <p>Your Personalized Path to Success</p>
+    <div class="intro">
+      <p>Confused about what to choose after 10th or 12th? Don’t worry! Explore streams like Intermediate courses, B.Tech programs, and trending educational fields. Select a stream to unlock your path forward.</p>
+    </div>
+  </header>
+
+  <section class="features">
+    <h2>What We Offer</h2>
+    <div class="features-container">
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="Career Guidance" />
+        <h3>Stream Guidance</h3>
+        <p>Personalized advice on choosing between MPC, BiPC, CEC, B.Tech branches, and more.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006540.png" alt="Roadmap" />
+        <h3>Step-by-Step Roadmaps</h3>
+        <p>Get clear career roadmaps after 10th & 12th to pursue your goals efficiently.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Courses Info" />
+        <h3>Trending Courses</h3>
+        <p>Know about trending career options like AI, Design, Data Science, and Professional Courses.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      nav.classList.toggle("active");
+    }
+
+   
+  function logout() {
+    localStorage.removeItem("isLoggedIn"); 
+    window.location.href = "index.html";   
+  }
+
+
+  </script>
+
+</body>
+</html>

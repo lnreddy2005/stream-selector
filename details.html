@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="details.css">
+  
+</head>
+<body>
+ 
+  <h1>📚 Course Details</h1>
+
+  <!-- All sections initially hidden -->
+  <section id="inter-mpc">
+    <h2>Intermediate  MPC</h2>
+    <p>MPC stands for Maths, Physics, Chemistry. It is ideal for students who wish to pursue Engineering or other science-related degrees like B.Sc, Architecture, etc.</p>
+  </section>
+
+  <section id="inter-bipc">
+    <h2>Intermediate BiPC</h2>
+    <p>BiPC includes Biology, Physics, and Chemistry. This stream is best for careers in Medicine, Pharmacy, Agriculture, Biotechnology, and Life Sciences.</p>
+  </section>
+
+  <section id="inter-cec">
+    <h2>Intermediate CEC</h2>
+    <p>CEC consists of Civics, Economics, and Commerce. It is suitable for careers in Business, Law, CA, CS, and Banking.</p>
+  </section>
+
+  <section id="btech-cse">
+    <h2>B.Tech  CSE</h2>
+    <p>Computer Science Engineering focuses on programming, software development, data structures, AI, and full-stack development.</p>
+  </section>
+
+  <section id="btech-ece">
+    <h2>B.Tech  ECE</h2>
+    <p>Electronics and Communication Engineering deals with electronics, signal processing, and embedded systems.</p>
+  </section>
+
+  <section id="btech-mech">
+    <h2>B.Tech Mechanical</h2>
+    <p>Mechanical Engineering is the core field dealing with design, machines, thermal, and production industries.</p>
+  </section>
+
+  <section id="diploma">
+    <h2>Diploma Courses</h2>
+    <p>Diploma courses are technical or skill-based short-term courses in areas like Civil, Electrical, Mechanical, and Computers.</p>
+  </section>
+
+  <section id="ca">
+    <h2>CA / CMA</h2>
+    <p>Chartered Accountant (CA) and Cost & Management Accountant (CMA) are professional commerce-based courses offering great scope in accounting and finance.</p>
+  </section>
+
+  <section id="design">
+    <h2>Design Courses</h2>
+    <p>Design fields include Fashion Design, Graphic Design, UX/UI, Animation, and more. Creativity and portfolio-building are key here.</p>
+  </section>
+
+  <p style="text-align:center;"><a href="stream-selector.html">← Back to Stream Selector</a></p>
+
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+
+    if (!hash) {
+      // No hash found — send back to main page
+      window.location.href = "index.html";
+      return;
+    }
+
+    const section = document.getElementById(hash);
+
+    if (section) {
+      section.classList.add('active');
+    } else {
+
+      document.body.innerHTML = `
+        <h1 style="text-align:center;">❌ Invalid Course Selected</h1>
+        <p style="text-align:center;">
+          <a href="index.html" style="color:white;">← Back to Stream Selector</a>
+        </p>`;
+    }
+  });
+  
+</script>
+
+</body>
+</html>
